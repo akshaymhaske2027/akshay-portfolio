@@ -3,11 +3,12 @@ import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-
+import logo from '../../../public/a-logo.png'
 import "bootstrap/dist/css/bootstrap.min.css";
 
 export default function Header() {
   return (
+    
     <div className="App">
       <header>
         <div id="navbarHeader" className="collapse bg-tra">
@@ -35,7 +36,7 @@ export default function Header() {
         <Navbar bg="dark" expand={false} variant="dark" className="box-shadow">
           <Container className="d-flex justify-content-between">
             <a href="#" className="navbar-brand d-flex align-items-center">
-              <strong>Album</strong>
+              <strong><img className="" alt="" /> ...</strong>
             </a>
             <Navbar.Toggle
               data-toggle="collapse"
@@ -48,5 +49,6 @@ export default function Header() {
         </Navbar>
       </header>
     </div>
-      );
+      
+  );
     }

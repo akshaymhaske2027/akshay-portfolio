@@ -1,18 +1,46 @@
 import styles from './ContactStyle.module.css';
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
+
 
 function Contact() {
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+
+    e.preventDefault();
+
+    emailjs
+      .sendForm('service_y53eg0p', 'template_ow9qxkz', form.current, {
+        publicKey: 'vx_6cjRHE1Am-Ibls',
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+          e.target.reset();
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );
+  };
+
+
+
+
   return (
     <section id="contact" className={styles.container}>
+
       <h1 className="sectionTitle">Contact</h1>
-      <form action="">
+      <form action="" ref={form} onSubmit={sendEmail}>
         <div className="formGroup">
           <label htmlFor="name" hidden>
             Name
           </label>
           <input
             type="text"
-            name="name"
-            id="name"
+            name="user_name"
             placeholder="Name"
             required
           />
@@ -23,8 +51,7 @@ function Contact() {
           </label>
           <input
             type="text"
-            name="email"
-            id="email"
+            name="user_email"
             placeholder="Email"
             required
           />
@@ -35,11 +62,10 @@ function Contact() {
           </label>
           <textarea
             name="message"
-            id="message"
             placeholder="Message"
             required></textarea>
         </div>
-        <input className="hover btn" type="submit" value="Submit" />
+        <input className="hover btn" type="submit" value="Send" />
       </form>
     </section>
   );

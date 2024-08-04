@@ -5,7 +5,7 @@ function Footer() {
     <section id="footer" className={styles.container}>
       <p>
         &copy; 2024 Akshay Mhaske. <br />
-        All rights reserved.
+        .
       </p>
     </section>
   );
