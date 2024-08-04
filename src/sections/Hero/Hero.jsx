@@ -1,25 +1,25 @@
-import styles from './HeroStyles.module.css';
-import heroImg from '../../assets/hero-img-2.png';
-import sun from '../../assets/sun.svg';
-import moon from '../../assets/moon.svg';
-import twitterLight from '../../assets/twitter-light.svg';
-import twitterDark from '../../assets/twitter-dark.svg';
-import githubLight from '../../assets/github-light.svg';
-import githubDark from '../../assets/github-dark.svg';
-import linkedinLight from '../../assets/linkedin-light.svg';
-import linkedinDark from '../../assets/linkedin-dark.svg';
+import styles from "./HeroStyles.module.css";
+import heroImg from "../../assets/hero-img-2.png";
+import sun from "../../assets/sun.svg";
+import moon from "../../assets/moon.svg";
+import twitterLight from "../../assets/twitter-light.svg";
+import twitterDark from "../../assets/twitter-dark.svg";
+import githubLight from "../../assets/github-light.svg";
+import githubDark from "../../assets/github-dark.svg";
+import linkedinLight from "../../assets/linkedin-light.svg";
+import linkedinDark from "../../assets/linkedin-dark.svg";
 import instagramLight from "../../assets/insta-light.svg";
 import instagramDark from "../../assets/insta-dark.svg";
-import CV from '../../assets/akshay.pdf';
-import { useTheme } from '../../common/ThemeContext';
+import CV from "../../assets/akshay.pdf";
+import { useTheme } from "../../common/ThemeContext";
 
 function Hero() {
   const { theme, toggleTheme } = useTheme();
 
-  const themeIcon = theme === 'light' ? sun : moon;
-  const twitterIcon = theme === 'light' ? twitterLight : twitterDark;
-  const githubIcon = theme === 'light' ? githubLight : githubDark;
-  const linkedinIcon = theme === 'light' ? linkedinLight : linkedinDark;
+  const themeIcon = theme === "light" ? sun : moon;
+  const twitterIcon = theme === "light" ? twitterLight : twitterDark;
+  const githubIcon = theme === "light" ? githubLight : githubDark;
+  const linkedinIcon = theme === "light" ? linkedinLight : linkedinDark;
   const instagramIcon = theme === "light" ? instagramLight : instagramDark;
 
   return (
@@ -39,13 +39,17 @@ function Hero() {
       </div>
       <div className={styles.info}>
         <h1>
-          Akshay
-          <br />
-          Mhaske
+          Hey, there <span className={styles.wave} role="img" aria-labelledby="wave">👋🏻</span> <br /> I’m{" "}
+          <span
+            className="hero_intro;
+}"
+          >
+            Akshay Mhaske
+          </span>
         </h1>
+
         <h2>Full Stack Developer(JAVA)</h2>
         <span>
-        
           <a href="https://twitter.com/x_balyaa" target="_blank">
             <img src={twitterIcon} alt="Twitter Icon" />
           </a>
@@ -60,7 +64,9 @@ function Hero() {
           </a>
         </span>
         <p className={styles.description}>
-        Passionate about crafting advanced Java-based web applications.</p>
+          Passionate about crafting advanced Full Stack Java-based web
+          applications.
+        </p>
         <a href={CV} download>
           <button className="hover">Resume</button>
         </a>
