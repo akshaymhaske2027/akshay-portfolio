@@ -10,7 +10,7 @@ import linkedinLight from "../../assets/linkedin-light.svg";
 import linkedinDark from "../../assets/linkedin-dark.svg";
 import instagramLight from "../../assets/insta-light.svg";
 import instagramDark from "../../assets/insta-dark.svg";
-import CV from "../../assets/akshay.pdf";
+import CV from "../../assets/akshay_mhaske_resume.pdf";
 import { useTheme } from "../../common/ThemeContext";
 
 function Hero() {

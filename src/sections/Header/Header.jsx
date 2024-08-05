@@ -11,7 +11,7 @@ export default function Header() {
     
     <div className="App">
       <header>
-        <div id="navbarHeader" className="collapse bg-tra">
+        <div id="navbarHeader" className="collapse bg-transparent">
           <Container>
             <Row>
               <Col sm={8} md={7} className="py-4">
@@ -36,7 +36,7 @@ export default function Header() {
         <Navbar bg="dark" expand={false} variant="dark" className="box-shadow">
           <Container className="d-flex justify-content-between">
             <a href="#" className="navbar-brand d-flex align-items-center">
-              <strong><img className="" alt="" /> ...</strong>
+              <img src={logo} alt="" />
             </a>
             <Navbar.Toggle
               data-toggle="collapse"
@@ -51,4 +51,4 @@ export default function Header() {
     </div>
       
   );
-    }
+}
